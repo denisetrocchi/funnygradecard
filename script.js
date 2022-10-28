@@ -1,22 +1,23 @@
 console.clear()
 
-//no time = poor coding (sorry!)
+//sorry but -> no time = poor coding
 
-let checkin = document.querySelector(".checkin"),
-    form = checkin.querySelector("form"),
+let check = document.querySelector(".check"),
+    form = check.querySelector("form"),
     input = form.querySelector("input");
 
 function init(){
   let curtain = document.querySelector(".curtain"),
       card = document.querySelector(".card"),
-      video = document.querySelector(".obj video");
+      vid = document.querySelector(".obj video");
 
-      checkin.classList.add("active");
+      check.classList.add("active");
       curtain.classList.add("active");
       setTimeout(() => {
         card.classList.add("active");
-        video.classList.add("active");
-      }, 1500)
+        vid.classList.add("active");
+        vid.play();
+      }, 1000)
 }
 
 input.addEventListener("input", (event) => {
