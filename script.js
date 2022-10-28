@@ -1,15 +1,8 @@
 console.clear()
 
-gsap.set(".card", {
-  opacity: 0,
-  scale: 0
-})
-
 function init(){
-  gsap.to(".card", {
-    opacity: 1,
-    scale: 1
-  })
+  let card = document.querySelector(".card");
+  card.classList.add("active");
 }
 
 document.addEventListener("keydown", function(event) {

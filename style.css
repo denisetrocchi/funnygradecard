@@ -59,10 +59,7 @@ main {
   height: 550px;
   margin: auto;
   padding: 20px 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  display: none;
   text-align: center;
   border-radius: 40px;
   box-shadow: 0 30px 60px 0 rgb(0 0 0 / 40%);
@@ -91,4 +88,11 @@ main {
 
 .card h1 {
   transform: rotate(-10deg);
+}
+
+.card.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
