@@ -1,12 +1,27 @@
 console.clear()
 
+//no time = poor coding (sorry!)
+
+let checkin = document.querySelector(".checkin"),
+    form = checkin.querySelector("form"),
+    input = form.querySelector("input");
+
 function init(){
-  let card = document.querySelector(".card");
-  card.classList.add("active");
+  let curtain = document.querySelector(".curtain"),
+      card = document.querySelector(".card"),
+      video = document.querySelector(".obj video");
+
+      checkin.classList.add("active");
+      curtain.classList.add("active");
+      setTimeout(() => {
+        card.classList.add("active");
+        video.classList.add("active");
+      }, 1500)
 }
 
-document.addEventListener("keydown", function(event) {
-  if (event.key == "b") {
+input.addEventListener("input", (event) => {
+  let val = input.value.toLowerCase();
+  if (val == "beatrice") {
     init()
   }
 });
