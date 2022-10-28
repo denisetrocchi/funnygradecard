@@ -6,17 +6,25 @@ let check = document.querySelector(".check"),
     form = check.querySelector("form"),
     input = form.querySelector("input");
 
+function active(x){
+  x.classList.add("active");
+}
+
 function init(){
-  let curtain = document.querySelector(".curtain"),
+  let racoon = document.querySelector("img.racoon"),
+      curtain = document.querySelector(".curtain"),
       card = document.querySelector(".card"),
       vid = document.querySelector(".obj video");
 
-      check.classList.add("active");
-      curtain.classList.add("active");
+      active(check)
+      active(racoon)     
       setTimeout(() => {
-        card.classList.add("active");
-        vid.classList.add("active");
-        vid.play();
+        active(curtain)
+        setTimeout(() => {
+          active(card)
+          active(vid)
+          vid.play();
+        }, 1000)
       }, 1000)
 }
 
