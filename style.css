@@ -119,12 +119,15 @@ main {
   bottom: 0;
   margin: auto;
   width: 100%;
+  max-width: 100vh;
   height: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
   display: none;
 }
 
 .card {
-  background: radial-gradient(farthest-side at bottom left, rgba(255, 0, 255, 0.5), #5700ae), radial-gradient(farthest-corner at bottom right,rgba(255, 50, 50, 0.5), #5700ae 400px);
+  background: radial-gradient(farthest-side at bottom left, rgb(213 42 213), #5700ae), radial-gradient(farthest-corner at bottom right,#0d001a, #5700ae 400px);
   width: 400px;
   height: 550px;
   margin: auto;
@@ -135,7 +138,7 @@ main {
   align-items: center;
   text-align: center;
   border-radius: 40px;
-  box-shadow: rgb(0 0 0 / 40%) 0px 30px 60px 0px, rgb(0 0 0 / 50%) -.5px -.5px 0px 2px inset;
+  box-shadow:rgb(0 0 0 / 60%) 0px 30px 60px 0px, rgb(0 0 0 / 50%) -0.5px -0.5px 0px 2px inset;
   transform: scale(0) rotate(45deg);
   transition: all .35s ease-in-out;
   position: relative;
@@ -144,7 +147,7 @@ main {
 .card::before {
   content: "";
   position: absolute;
-  background: radial-gradient(circle at 130% -20%, #f1bbff 5%, transparent 50%), radial-gradient(circle at -20% 140%,#c3bbff 5%, transparent 68%);
+  background: radial-gradient(circle at 130% -20%, #e78aff 5%, transparent 60%, #210042), radial-gradient(circle at -20% 140%,#c3bbff 5%, transparent 68%);
   width: 100%;
   height: 100%;
   border-radius: 40px;
